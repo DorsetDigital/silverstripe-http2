@@ -40,10 +40,12 @@ class    DDMiddleware implements HTTPMiddleware
 
         $reqs = Requirements::backend();
         $js = array_keys($reqs->getJavascript());
-        $newJS = [];
+        $headerParts = [];
         foreach ($js as $script) {
-            $newJS[] = Director::absoluteURL($script);
+            $headerParts[] = '<'.Director::absoluteURL($script).'>; rel=preload; as=script';
         }
+
+        $css = $reqs->getCSS();
 
         $scripts = implode(",", $newJS);
         $response->addHeader('X-Link', $scripts);
