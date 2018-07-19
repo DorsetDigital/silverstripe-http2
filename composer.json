@@ -1,0 +1,26 @@
+{
+ "name": "dorsetdigital/silverstripe-http2",
+ "description": "Adds support for HTTP2 features",
+ "type": "silverstripe-vendormodule",
+ "homepage": "https://github.com/DorsetDigital/silverstripe-http2",
+ "keywords": ["silverstripe", "http", "http2"],
+ "authors": [
+  {
+   "name": "Tim Burt",
+   "email": "tim@dorset-digital.net"
+  }
+ ], 
+ "require": {
+  "silverstripe/vendor-plugin": "^1.0",
+  "silverstripe/cms": "^4.0"
+ },
+ "license": "BSD-3-Clause",
+ "autoload": {
+  "psr-4": {
+   "DorsetDigital\\HTTP2\\": "src/"
+  }
+ },
+ "extra": {
+ },
+ "minimum-stability": "dev"
+}

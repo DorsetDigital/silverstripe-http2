@@ -1,0 +1,10 @@
+---
+Name: DDHTTPrequestprocessors
+After:
+  - requestprocessors
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Control\Director:
+    properties:
+      Middlewares:
+        DDMiddleware: %$DorsetDigital\HTTP2\DDMiddleware
