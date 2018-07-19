@@ -6,7 +6,7 @@ Adds basic HTTP2 functionality like requirements push
 *Silverstripe 4.x
 
 
-#Usage
+# Usage
 
 Add a config YML file to enable:
 
