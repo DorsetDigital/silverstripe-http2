@@ -42,15 +42,15 @@ class DDMiddleware implements HTTPMiddleware
 
         $reqs = Requirements::backend();
         $js = array_keys($reqs->getJavascript());
-        $headerParts = [];
+        $headerParts = [ ];
         foreach ($js as $script) {
-            $headerParts[] = '<' . $this->pathForFile($script) . '>; rel=preload; as=script';
+            $headerParts[ ] = '<' . $this->pathForFile($script) . '>; rel=preload; as=script';
         }
 
         $css = array_keys($reqs->getCSS());
 
         foreach ($css as $style) {
-            $headerParts[] = '<' . $this->pathForFile($style) . '>; rel=preload; as=style';
+            $headerParts[ ] = '<' . $this->pathForFile($style) . '>; rel=preload; as=style';
         }
 
 
