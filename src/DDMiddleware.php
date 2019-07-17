@@ -39,6 +39,10 @@ class DDMiddleware implements HTTPMiddleware
         if ($this->config()->get('enabled') !== true) {
             return $response;
         }
+        
+        if ($response->getHeader('http2push') === 'false') {
+            return $response;
+        }        
 
         $reqs = Requirements::backend();
         $js = array_keys($reqs->getJavascript());
