@@ -7,4 +7,4 @@ SilverStripe\Core\Injector\Injector:
   SilverStripe\Control\Director:
     properties:
       Middlewares:
-        DDMiddleware: %$DorsetDigital\HTTP2\DDMiddleware
+        DDMiddleware: '%$DorsetDigital\HTTP2\DDMiddleware'
